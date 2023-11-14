@@ -55,15 +55,15 @@ These can be retrieved from AWS.
 Run the steps:
 
   1. terraform init
-  2. terraform plan (validates the configuration files are syntatically ok)
+  2. terraform plan (validates the configuration files are syntactically ok)
   3. terraform apply -auto-approve
 
-The steps are automated via github work actions in the `build-and-deploy.yaml` file.
+The steps are automated via GitHub work actions in the `build-and-deploy.yaml` file.
 
 a live version of this app can be found here: <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
 
 The pending item is to provision an SSL certificate for the app.
 
-The app is deployed to AWS fargate and runs on node.js and next.js server.
+The app is deployed to AWS Fargate and runs on node.js and next.js server.
 
-Github branch protection rules have been setup on the repo i.e each pull request should be updated with base branch to ensure code is upto date, each commit should be signed. You can use GPG to achieve this.
+Github branch protection rules have been set up on the repo i.e. each pull request should be updated with the base branch to ensure the code is up to date, and each commit should be signed. You can use GPG to achieve this.
