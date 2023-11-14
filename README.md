@@ -16,7 +16,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-The graphql endpoint can be accessed by the route `{base_url}/api/graphql
+The graphql endpoint can be accessed by the route `{base_url}/api/graphql`
 
 An example query is:
 
@@ -60,7 +60,7 @@ Run the steps:
 
 The steps are automated via github work actions in the `build-and-deploy.yaml` file.
 
-a live version of this app can be found here: <https://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
+a live version of this app can be found here: <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
 
 The pending item is to provision an SSL certificate for the app.
 
