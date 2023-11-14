@@ -40,6 +40,15 @@ module "alb" {
   health_check_interval = 60
 }
 
+resource "aws_ecs_cluster" "ecs_cluster" {
+  name = "${var.namespace}-${var.stage}-${var.name}"
+  tags = {
+    Namespace = var.namespace
+    Stage     = var.stage
+    Name      = var.name
+  }
+}
+
 module "ecr" {
   source  = "cloudposse/ecr/aws"
   version = "0.35.0"
@@ -138,7 +147,7 @@ resource "aws_iam_openid_connect_provider" "github_actions_oidc" {
   ]
 
   thumbprint_list = [
-    "6938fd4d98bab03faadb97b34396831e3780aea1"
+    "1b511abead59c6ce207077c0bf0e0043b1382612"
   ]
 
   tags = {
