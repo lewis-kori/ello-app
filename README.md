@@ -60,9 +60,7 @@ Run the steps:
 
 The steps are automated via GitHub work actions in the `build-and-deploy.yaml` file.
 
-a live version of this app can be found here: <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
-
-The pending item is to provision an SSL certificate for the app.
+a live version of this app can be found here: <https://ello.lewiskori.com/>  with the ALB link being <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
 
 The app is deployed to AWS Fargate and runs on node.js and next.js server.
 
