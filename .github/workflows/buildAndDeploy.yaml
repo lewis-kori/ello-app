@@ -15,7 +15,7 @@ env:
 jobs:
   build:
     name: Build Docker Image
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check Out
@@ -43,7 +43,7 @@ jobs:
   terraform:
     name: Terraform Apply
     needs: build
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     environment: production
 
     defaults:
