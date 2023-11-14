@@ -40,9 +40,9 @@ module "alb" {
   security_group_ids    = [module.vpc.vpc_default_security_group_id]
   health_check_interval = 60
 
-  # https_enabled         = true !todo: enable https
-  # certificate_arn       = aws_acm_certificate.cert.arn
-  # http_redirect         = true
+  https_enabled         = true
+  certificate_arn       = "arn:aws:acm:us-east-1:718017673458:certificate/801349fb-f1eb-42b9-a472-46e28aed1766"
+  http_redirect         = true
 }
 
 resource "aws_ecs_cluster" "ecs_cluster" {
