@@ -4,7 +4,7 @@ import { gql } from 'graphql-tag';
 const fs = require('fs');
 const path = require('path');
 
-import { bookTokenizer } from '../../utils/stringSanitizers';
+import { bookTokenizer } from '@utils/stringSanitizers';
 const booksDirectoryPath = './resources';
 
 const books = [];
