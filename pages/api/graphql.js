@@ -61,8 +61,8 @@ const resolvers = {
         (book) =>
           book.title.toLowerCase().trim() === args.title.toLowerCase().trim()
       );
-      let h = bookTokenizer(book)
-      return h
+      let tokenizedBook = bookTokenizer(book)
+      return tokenizedBook
     },
   },
 };

@@ -1,5 +1,6 @@
 name: 'Build and deploy with terraform'
 
+# deploys the app on merge to main
 on:
   push:
     branches: [main]
@@ -10,7 +11,6 @@ permissions:
 
 env:
   AWS_REGION: us-east-1
-  IAM_ROLE_ARN: arn:aws:iam::718017673458:role/github_actions
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ env.IAM_ROLE_ARN }}
+          role-to-assume: ${{ secrets.IAM_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
       
       - name: Login to Amazon ECR
@@ -57,7 +57,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ env.IAM_ROLE_ARN }}
+          role-to-assume: ${{ secrets.IAM_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
         
       - name: Setup Terraform
