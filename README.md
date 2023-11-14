@@ -20,7 +20,7 @@ The graphql endpoint can be accessed by the route `{base_url}/api/graphql
 
 An example query is:
 
-```json
+```sh
 { 
     book(title: "A Color of His Own"){
         title,
