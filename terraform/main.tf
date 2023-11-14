@@ -24,6 +24,7 @@ module "subnets" {
   max_nats            = 1
 }
 
+#  entry point to the application 
 module "alb" {
   source  = "cloudposse/alb/aws"
   version = "1.7.0"
@@ -38,6 +39,10 @@ module "alb" {
   subnet_ids            = module.subnets.public_subnet_ids
   security_group_ids    = [module.vpc.vpc_default_security_group_id]
   health_check_interval = 60
+
+  # https_enabled         = true !todo: enable https
+  # certificate_arn       = aws_acm_certificate.cert.arn
+  # http_redirect         = true
 }
 
 resource "aws_ecs_cluster" "ecs_cluster" {
@@ -157,6 +162,7 @@ resource "aws_iam_openid_connect_provider" "github_actions_oidc" {
   }
 }
 
+# create a role for github actions to assume
 resource "aws_iam_role" "github_actions_role" {
   name = "github_actions"
 

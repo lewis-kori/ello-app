@@ -65,3 +65,5 @@ a live version of this app can be found here: <https://elloapp-test-elloapp-1256
 The pending item is to provision an SSL certificate for the app.
 
 The app is deployed to AWS fargate and runs on node.js and next.js server.
+
+Github branch protection rules have been setup on the repo i.e each pull request should be updated with base branch to ensure code is upto date, each commit should be signed. You can use GPG to achieve this.
