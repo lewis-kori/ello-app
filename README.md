@@ -62,8 +62,8 @@ The steps are automated via GitHub work actions in the `build-and-deploy.yaml` f
 
 ### Internet urls
 
-1.a live version of this app can be found here: <https://ello.lewiskori.com/>
-2.ALB link being <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
+    1.a live version of this app can be found here: <https://ello.lewiskori.com/>
+    2.ALB link being <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
 
 ### runtime environment
 
