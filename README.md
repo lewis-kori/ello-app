@@ -62,14 +62,14 @@ The steps are automated via GitHub work actions in the `build-and-deploy.yaml` f
 
 ### Internet urls
 
-    1.a live version of this app can be found here: <https://ello.lewiskori.com/>
-    2.ALB link being <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
+1. A live version of this app can be found here: <https://ello.lewiskori.com/>
+2. ALB link being <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
 
 ### runtime environment
 
 The app is deployed to AWS Fargate and runs on node.js and next.js server.
 
-Github branch protection rules have been set up on the repo i.e. each pull request should be updated with the base branch to ensure the code is up to date, and each commit should be signed. You can use GPG to achieve this.
+Github branch protection rules have been set up on the repo i.e. each pull request should be updated with the base branch to ensure the code is up to date, and each commit should be signed. More about this in the [docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits).
 
 ## Deployment
 
