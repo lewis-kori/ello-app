@@ -40,7 +40,7 @@ An example query is:
 
 The book title can be case insensitive.
 
-### Cloud configuration
+## Cloud configuration
 
 Enter the terraform directory where all terraform configuration files can be found.
 Note, to proceed with next steps, you require the following env variables
@@ -60,14 +60,17 @@ Run the steps:
 
 The steps are automated via GitHub work actions in the `build-and-deploy.yaml` file.
 
-a live version of this app can be found here: <https://ello.lewiskori.com/>  with the ALB link being <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
+### Internet urls
+
+1.a live version of this app can be found here: <https://ello.lewiskori.com/>
+2.ALB link being <http://elloapp-test-elloapp-1256399429.us-east-1.elb.amazonaws.com>
+
+### runtime environment
 
 The app is deployed to AWS Fargate and runs on node.js and next.js server.
 
 Github branch protection rules have been set up on the repo i.e. each pull request should be updated with the base branch to ensure the code is up to date, and each commit should be signed. You can use GPG to achieve this.
 
-### TODO
+## Deployment
 
-1. Add unit test with mocha and chai to test the graphql functions
-2. Add test task in github action to run before deployment
-3. Could use more linting rules config. But not a hard requirement at the moment.
+The app autodeploys by creating a Github release or tag.
