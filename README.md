@@ -83,4 +83,4 @@ Github branch protection rules have been set up on the repo i.e. each pull reque
 
 ## Deployment
 
-The app autodeploys by creating a Github release or tag.
+The app autodeploys by creating a Github release or tag. Semantic versioning is recommended.
