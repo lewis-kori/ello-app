@@ -1,6 +1,14 @@
 # Getting Started
 
-First, run the development server:
+Install dependendencies by running
+
+```sh
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -18,7 +26,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 The graphql endpoint can be accessed by the route `{base_url}/api/graphql` which serves a graphiql interfaces eg <https://ello.lewiskori.com/api/graphql>
 
-![GRAPHIQL_APOLLO](<Screenshot 2023-11-15 at 10.47.55 PM.png>)
+![GRAPHIQL_APOLLO](<public/graphiql_example.png>)
 
 An example query is:
 
@@ -44,9 +52,11 @@ The book title can be case insensitive.
 
 ## Unit Tests
 
-We're using jest as our test run and the tests can be executed by running
+We're using jest as our test runner and the tests can be executed by running
 
 ```sh
+npm run test
+# or
 yarn test
 ```
 

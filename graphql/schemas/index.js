@@ -8,12 +8,12 @@ const typeDefs = gql`
   type Book {
     title: String
     author: String
-    pages: [Page!]
+    pages: [Page!]!
   }
 
   type Page {
     pageIndex: Int
-    content: [Content!]
+    content: [Content!]!
   }
 
   type Content {

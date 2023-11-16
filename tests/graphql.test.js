@@ -1,6 +1,6 @@
 import { GET_TOKENIZED_BOOK } from '@/graphql/queries/books';
-import resolvers from '@/pages/api/resolvers';
-import typeDefs from '@/pages/api/schemas';
+import resolvers from '@/graphql/resolvers';
+import typeDefs from '@/graphql/schemas';
 import { ApolloServer } from '@apollo/server';
 
 it('should get a book object', async () => {
@@ -15,6 +15,7 @@ it('should get a book object', async () => {
   });
   expect(response.body.singleResult.errors).toBeUndefined();
   expect(response.body.singleResult.data).toHaveProperty('book');
+  expect(Array.isArray(response.body.singleResult.data.book.pages)).toBe(true);
   expect(response.body.singleResult.data?.book?.title).toBe(
     'A Color of His Own'
   );
