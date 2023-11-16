@@ -16,7 +16,9 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-The graphql endpoint can be accessed by the route `{base_url}/api/graphql`
+The graphql endpoint can be accessed by the route `{base_url}/api/graphql` which serves a graphiql interfaces eg <https://ello.lewiskori.com/api/graphql>
+
+![GRAPHIQL_APOLLO](<Screenshot 2023-11-15 at 10.47.55 PM.png>)
 
 An example query is:
 
@@ -39,6 +41,14 @@ An example query is:
 ```
 
 The book title can be case insensitive.
+
+## Unit Tests
+
+We're using jest as our test run and the tests can be executed by running
+
+```sh
+yarn test
+```
 
 ## Cloud configuration
 
@@ -69,8 +79,8 @@ The steps are automated via GitHub work actions in the `build-and-deploy.yaml` f
 
 The app is deployed to AWS Fargate and runs on node.js and next.js server.
 
-Github branch protection rules have been set up on the repo i.e. each pull request should be updated with the base branch to ensure the code is up to date, and each commit should be signed. More about this in the [docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits).
+Github branch protection rules have been set up on the repo i.e. each pull request should be updated with the base branch to ensure the code is up to date, no direct commits to main branch, and each commit should be signed. More about this in the [docs](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits).
 
 ## Deployment
 
-The app autodeploys by creating a Github release or tag.
+The app autodeploys by creating a Github release or tag. Semantic versioning is recommended.
